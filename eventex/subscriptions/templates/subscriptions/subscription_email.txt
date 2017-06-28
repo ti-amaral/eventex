@@ -1,0 +1,4 @@
+NOME: {{ name }}
+CPF: {{ cpf }}
+EMAIL: {{ email }}
+TELEFONE: {{ phone }}
