@@ -2,6 +2,10 @@
 
 Sistema de Eventos encomendado pela Morena
 
+[![Build Status](https://travis-ci.org/peasant87/eventex.svg?branch=master)](https://travis-ci.org/peasant87/eventex)
+[![Code Health](https://landscape.io/github/peasant87/eventex/master/landscape.svg?style=flat)](https://landscape.io/github/peasant87/eventex/master)
+
+
 ## Como desenvolver
 
 1. Clone o repositório
