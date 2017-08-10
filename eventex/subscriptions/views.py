@@ -31,17 +31,17 @@ def create(request):
                'subscriptions/subscription_email.txt',
                {'subscription':subscription})
 
-    return HttpResponseRedirect('/inscricao/{}/'.format(subscription.pk))
+    return HttpResponseRedirect('/inscricao/{}/'.format(subscription.hashId))
 
 
 def new(request):
     return render(request, 'subscriptions/subscription_form.html', {'form': SubscriptionForm()})
 
 
-def detail(request, pk):
+def detail(request, hashId):
     from django.http import HttpResponse
     try:
-        subscription = Subscription.objects.get(pk=pk)
+        subscription = Subscription.objects.get(hashId=hashId)
     except Subscription.DoesNotExist:
         raise Http404
 

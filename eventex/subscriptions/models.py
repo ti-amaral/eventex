@@ -1,3 +1,5 @@
+import uuid
+
 from django.db import models
 
 class Subscription(models.Model):
@@ -6,6 +8,7 @@ class Subscription(models.Model):
     email = models.EmailField(verbose_name="e-mail")
     phone = models.CharField(max_length=20,verbose_name="telefone")
     created_at = models.DateTimeField(auto_now_add=True,verbose_name="criado em")
+    hashId = models.UUIDField(primary_key=False, default=uuid.uuid4, editable=False)
 
     class Meta:
         verbose_name_plural = "inscrições"
