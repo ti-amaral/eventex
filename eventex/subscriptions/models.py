@@ -9,6 +9,7 @@ class Subscription(models.Model):
     phone = models.CharField(max_length=20,verbose_name="telefone")
     created_at = models.DateTimeField(auto_now_add=True,verbose_name="criado em")
     hashId = models.UUIDField(primary_key=False, default=uuid.uuid4, editable=False)
+    paid = models.BooleanField(default=False, verbose_name="pago")
 
     class Meta:
         verbose_name_plural = "inscrições"
